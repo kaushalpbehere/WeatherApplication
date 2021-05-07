@@ -10,8 +10,7 @@ weatherForm.addEventListener('submit', (e) => {
         url: '/weatherData?address=' + location,
         success: function (response) {
             console.log(response)
-            console.log(response.forecast)
-            console.log(response.location)
+           
 
             var htmlLocationData = '<div class="col-lg-12 mx-auto"><header class="text-center pb-">'
                 + '<h1 class="h2"> ' + response.placeName + '</h1>'

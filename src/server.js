@@ -97,8 +97,24 @@ app.get('/WeatherData/', (req, res) => {
         //     location: 'Philadelphia'
         //     })
         res.send({
-            forecast: weatherData,
-            location: locationAddress
+            title: 'Weather',
+            latitude: weatherData.locationData.latitude,
+            longitude: weatherData.locationData.longitude,
+            placeName: weatherData.locationData.placeName,
+            observationTime: weatherData.weatherData.observationTime,
+            temperature: weatherData.weatherData.temperature,
+            weatherDescriptions: weatherData.weatherData.weatherDescriptions,
+            windSpeed: weatherData.weatherData.windSpeed,
+            windDegree: weatherData.weatherData.windDegree,
+            windDir: weatherData.weatherData.windDir,
+            pressure: weatherData.weatherData.pressure,
+            precipitation: weatherData.weatherData.precipitation,
+            humidity: weatherData.weatherData.humidity,
+            cloudCover: weatherData.weatherData.cloudCover,
+            feelsLike: weatherData.weatherData.feelsLike,
+            uvIndex: weatherData.weatherData.uvIndex,
+            visibility: weatherData.weatherData.visibility,
+            isDay: weatherData.weatherData.isDay
         })
         // res.send(weatherData)
         // res.send('weather', {

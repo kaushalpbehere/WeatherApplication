@@ -97,5 +97,8 @@ app.get('*', (req, res) => {
     })
 })
 
+//For deploying the application in heroku we need to have this port value to be defined at runtime
+const port= process.env.PORT || 3000
+
 // Starting the web server to listen to the server on port 3000
-app.listen(3000, () => { console.log('Server Application is up and running on port : 3000 !!!') })
+app.listen(port, () => { console.log('Server Application is up and running on port : 3000 !!!') })

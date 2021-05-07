@@ -92,14 +92,14 @@ app.get('/WeatherData/', (req, res) => {
     var locationAddress = (req.query.address == '' || req.query.address == null || req.query.address == undefined) ? 'Baker Street, United Kingdom' : req.query.address
     serverExports.getWeatherReport(locationAddress, (weatherData) => {
         console.log(weatherData)
-        res.send({
-            forecast: 'It is snowing',
-            location: 'Philadelphia'
-            })
         // res.send({
-        //     forecast: weatherData,
-        //     location: locationAddress
-        // })
+        //     forecast: 'It is snowing',
+        //     location: 'Philadelphia'
+        //     })
+        res.send({
+            forecast: weatherData,
+            location: locationAddress
+        })
         // res.send(weatherData)
         // res.send('weather', {
         //     title: 'Weather',

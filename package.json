@@ -5,7 +5,7 @@
     "hbs": "^4.1.2",
     "requests": "^0.3.0"
   },
-  "scripts": {
+    "scripts": {
     "start": "node src/server.js"
   },
   "name": "weatherapplication",

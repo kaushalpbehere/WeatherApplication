@@ -1,0 +1,54 @@
+{{>template}}
+<br />
+<section class="py-5">
+    <div class="container ">
+        <div class="col-lg-12 mx-auto">
+            <form>
+                <div class="form-row align-items-center">
+                    <div class="col-lg-10">
+                        <label class="sr-only" for="inlineFormInputName">Name</label>
+                        <input id="searchText" type="text" class="form-control" id="inlineFormInputName"
+                            placeholder="Search with the address here">
+                        <small id="passwordHelpInline" class="text-muted">i.e. Weather for 'Baker Street' is as shown
+                            below</small>
+                    </div>
+                    <button id="searchButton" type="submit" class="btn btn-dark"> Search weather</button>
+                </div>
+            </form>
+        </div>
+        <div class="row col-lg-12">
+            <div class="col-lg-12 mx-auto">
+                <header class="text-center pb-">
+                    <h1 class="h2"> {{placeName}}</h1>
+                    <p> {{observationTime}} for Latitude: {{ latitude}} and Longitude: {{longitude}} </p>
+                </header>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 mx-auto">
+                <blockquote class="blockquote blockquote-custom bg-white p-5 shadow rounded">
+                    <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-quote-left text-white"></i>
+                    </div>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{temperature}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{weatherDescriptions}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{windSpeed}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{windDegree}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{windDir}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{pressure}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{precipitation}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{humidity}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{cloudCover}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{feelsLike}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{uvIndex}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{visibility}} </p>
+                    <p class="mb-0 mt-2 font-italic text-center"> {{isDay}} </p>
+
+                    <footer class="blockquote-footer pt-4 mt-4 border-top text-center">
+                        <cite title="Source Title"> from NodeLearn</cite>
+                    </footer>
+                </blockquote>
+            </div>
+        </div>
+    </div>
+    <script src="/js/script.js"></script>
+</section>

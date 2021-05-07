@@ -1,0 +1,28 @@
+{
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "requests": "^0.3.0"
+  },
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "name": "weatherapplication",
+  "version": "2.0.0",
+  "description": "This is the first server based application",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaushalpbehere/WeatherApplication.git"
+  },
+  "author": "Kaushal Behere",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaushalpbehere/WeatherApplication/issues"
+  },
+  "homepage": "https://github.com/kaushalpbehere/WeatherApplication#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}

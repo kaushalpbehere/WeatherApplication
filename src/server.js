@@ -82,7 +82,41 @@ app.get('/weather/', (req, res) => {
             uvIndex: weatherData.weatherData.uvIndex,
             visibility: weatherData.weatherData.visibility,
             isDay: weatherData.weatherData.isDay
-        })        
+        })
+    })
+})
+
+// 4: /weatherData
+app.get('/WeatherData/', (req, res) => {
+    // console.log()
+    var locationAddress = (req.query.address == '' || req.query.address == null || req.query.address == undefined) ? 'Baker Street, United Kingdom' : req.query.address
+    serverExports.getWeatherReport(locationAddress, (weatherData) => {
+        console.log(weatherData)
+        res.send({
+            forecast: weatherData,
+            location: locationAddress
+        })
+        // res.send(weatherData)
+        // res.send('weather', {
+        //     title: 'Weather',
+        //     latitude: weatherData.locationData.latitude,
+        //     longitude: weatherData.locationData.longitude,
+        //     placeName: weatherData.locationData.placeName,
+        //     observationTime: weatherData.weatherData.observationTime,
+        //     temperature: weatherData.weatherData.temperature,
+        //     weatherDescriptions: weatherData.weatherData.weatherDescriptions,
+        //     windSpeed: weatherData.weatherData.windSpeed,
+        //     windDegree: weatherData.weatherData.windDegree,
+        //     windDir: weatherData.weatherData.windDir,
+        //     pressure: weatherData.weatherData.pressure,
+        //     precipitation: weatherData.weatherData.precipitation,
+        //     humidity: weatherData.weatherData.humidity,
+        //     cloudCover: weatherData.weatherData.cloudCover,
+        //     feelsLike: weatherData.weatherData.feelsLike,
+        //     uvIndex: weatherData.weatherData.uvIndex,
+        //     visibility: weatherData.weatherData.visibility,
+        //     isDay: weatherData.weatherData.isDay
+        // })
     })
 })
 
@@ -98,7 +132,7 @@ app.get('*', (req, res) => {
 })
 
 //For deploying the application in heroku we need to have this port value to be defined at runtime
-const port= process.env.PORT || 3000
+const port = process.env.PORT || 3000
 
 // Starting the web server to listen to the server on port 3000
 app.listen(port, () => { console.log('Server Application is up and running on port : 3000 !!!') })

@@ -8,8 +8,9 @@ weatherForm.addEventListener('submit', (e) => {
     //Location value is with us now. 
     /* If there is an error make sure you add link to this script file
      the the bottom of the page instead of adding it into the header. */
-    fetch('/weather?address=' + location)
+    fetch('/weatherData?address=' + location)
         .then((response) => {
-            console.log(response)
+            console.log(response.forecast)
+            console.log(response.location)
         })
 })

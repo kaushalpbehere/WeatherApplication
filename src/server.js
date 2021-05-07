@@ -93,9 +93,13 @@ app.get('/WeatherData/', (req, res) => {
     serverExports.getWeatherReport(locationAddress, (weatherData) => {
         console.log(weatherData)
         res.send({
-            forecast: weatherData,
-            location: locationAddress
-        })
+            forecast: 'It is snowing',
+            location: 'Philadelphia'
+            })
+        // res.send({
+        //     forecast: weatherData,
+        //     location: locationAddress
+        // })
         // res.send(weatherData)
         // res.send('weather', {
         //     title: 'Weather',

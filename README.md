@@ -31,6 +31,13 @@ Note: Dockerfile is present at the same location.
 ```docker run -dp 3000:3000 getting-started ```
 
 - Irrespective of where you run it, in the browser, navigate to [localhost at port 3000](http://localhost:3000/)
+
+## Stopping the application 
+- If running in a node environment, navigate to command prompt (from where you were running the app), ``` CTRL+C ```
+- If running in a docker environment, 
+  -- Run ``` docker ps ``` to list all available containers
+  -- Run ```docker stop <the-container-id> ``` Note: first 2 characters are enough.
+  
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first

@@ -3,10 +3,12 @@
     "chalk": "^4.1.1",
     "express": "^4.17.1",
     "hbs": "^4.1.2",
-    "requests": "^0.3.0"
+    "requests": "^0.3.0",
+    "node-geocoder": "^4.2.0"
   },
-    "scripts": {
-    "start": "node src/server.js"
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
   },
   "name": "weatherapplication",
   "version": "2.0.0",
